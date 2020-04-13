@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="MRS_Store.Views.POS.Controls.SideFunctions"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MRS_Store.Views.POS.Controls" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid x:Name="GridSideFunctions" Width="60" HorizontalAlignment="Right" Background="#0D47A1" >
+            <StackPanel>
+                <ListView Foreground="WhiteSmoke" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewFinctions_SelectionChanged">
+                    <ListViewItem x:Name="Actions"  Height="50" >
+                        <StackPanel Orientation="Vertical" >
+                            <materialDesign:PackIcon Kind="Electricity" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0" />
+                            <TextBlock Text="Actions" FontSize="12" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="Items" Height="50">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon Kind="CubeOutline" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                            <TextBlock Text="Products" FontSize="12"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="Cutomers" Height="50">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon Kind="CustomerService" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                            <TextBlock Text="Customers" FontSize="12"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="Descounts" Height="50">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon Kind="Discount" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                            <TextBlock Text="Discounts" FontSize="12"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="Shifts" Height="50">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon Kind="ChangeHistory" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                            <TextBlock Text="Shifts" FontSize="12"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="Payments" Height="50">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon Kind="Cash" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                            <TextBlock Text="Payments" FontSize="12"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="Misc" Height="50">
+                        <StackPanel Orientation="Vertical">
+                            <materialDesign:PackIcon Kind="ImageFilterTiltShift" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                            <TextBlock Text="Misc" FontSize="12"/>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

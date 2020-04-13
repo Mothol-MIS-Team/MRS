@@ -1,0 +1,43 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:MRS_Store.Views.Login"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:ViewModels="clr-namespace:MRS_Store.ViewModels"
+    x:Class="MRS_Store.Views.Login.LoginView"
+    mc:Ignorable="d"
+    x:Name="ucLoginView"
+    Title="Login" Height="400" Width="600"  WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Rectangle RadiusY="8" RadiusX="8" Fill="White"/>
+        <Button HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Content="{materialDesign:PackIcon Close}" ToolTip="Close" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Click="BtnClose_Click" FontSize="20"/>
+        <Image  Margin="310,0,0,0" Stretch="UniformToFill" Source="/Views/Login/welcome.jpg" />
+        <Rectangle Margin="310,0,0,0"/>
+        <StackPanel Margin="20,10,290,10">
+            <Image  Width="100" Height="89" Stretch="Uniform" Source="/Views/Login/Logo.png"/>
+            <Label Content="Login" FontFamily="Segoe UI Black" FontSize="24" Margin="0,10" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <StackPanel Margin="0,15" Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="#707070"/>
+                <TextBox x:Name="txtUsername" Text="{Binding UserName}" materialDesign:HintAssist.Hint="Username" Width="250" Margin="5" Cursor=""/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Foreground="#707070"/>
+                <PasswordBox x:Name="txtPassword" PasswordChanged="MapPassword" materialDesign:HintAssist.Hint="Password" Width="250" Margin="5"/>
+                <TextBox x:Name="PasswordMapper" Text="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Foreground="{x:Null}" Width="1" Panel.ZIndex="1" Visibility="Hidden"/>
+            </StackPanel>
+            <Grid>
+                <Label x:Name="txtValidation" Content="{Binding Status}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Foreground="#FFDD4545"/>
+            </Grid>
+            <Button x:Name="btnLogin" HorizontalAlignment="Center" Content="LOGIN" FontFamily="Impact" FontSize="18" Width="100" Background="#FF307CD6" BorderBrush="#FF307CD6" Click="BtnLogin_Click" Command="{Binding LoginCommand , Mode=OneTime}" CommandParameter="{Binding ElementName=ucLoginView}"/>
+        </StackPanel>
+        <StackPanel Margin="310,50,0,50">
+            <TextBlock Text="MRS" Foreground="White" HorizontalAlignment="Center" FontSize="48" FontFamily="Champagne &amp; Limousines" FontWeight="Bold"/>
+            <TextBlock Text="Mothol Retail Solution" Foreground="White" HorizontalAlignment="Center" FontSize="12" FontFamily="Champagne &amp; Limousines"/>
+            <TextBlock Text="Are you ready to join a new Point Of Sale adventure" Foreground="White" HorizontalAlignment="Center" Width="280" FontSize="24" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Center" Margin="0,50,0,0"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="MRS_Store.Views.POS.POSControls.Totals"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MRS_Store.Views.POS.POSControls" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Margin="10">
+                <TextBlock Foreground="Gray" Text="Totals" FontWeight="Bold" FontSize="16"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Foreground="Gray" Text="Lines : " FontWeight="Bold"/>
+                    <TextBlock Text="3" Foreground="LightGray" Margin="5 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Foreground="Gray" Text="Products : " FontWeight="Bold"/>
+                    <TextBlock Text="6" Foreground="LightGray" Margin="5 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Foreground="Gray" Text="Discount : " FontWeight="Bold"/>
+                    <TextBlock Text="4.5" Foreground="LightGray" Margin="5 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Foreground="Gray" Text="Subtotal : " FontWeight="Bold"/>
+                    <TextBlock Text="81" Foreground="LightGray" Margin="5 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Foreground="Gray" Text="VAT : " FontWeight="Bold"/>
+                    <TextBlock Text="11.34" Foreground="LightGray" Margin="5 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Foreground="Gray" Text="Payments : " FontWeight="Bold"/>
+                    <TextBlock Text="74.34" Foreground="LightGray" Margin="5 0"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Margin="10">
+                <TextBlock Foreground="Gray" Text="Cutomer" FontWeight="Bold" FontSize="16"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Foreground="Gray" Text="Name : " FontWeight="Bold"/>
+                    <TextBlock Text="Amr Metwally" Foreground="LightGray" Margin="5 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Foreground="Gray" Text="Code : " FontWeight="Bold"/>
+                    <TextBlock Text="Cust-002" Foreground="LightGray" Margin="5 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Foreground="Gray" Text="Telephone : " FontWeight="Bold"/>
+                    <TextBlock Text="01277360358" Foreground="LightGray" Margin="5 0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Foreground="Gray" Text="Points : " FontWeight="Bold"/>
+                    <TextBlock Text="200" Foreground="LightGray" Margin="5 0"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel Grid.Column="1" Margin="10" Orientation="Horizontal">
+                <TextBlock Foreground="Gray" Text="Amount Due : " FontWeight="Bold" FontSize="16"/>
+                <TextBlock Foreground="Gray" Text="18.00 SR" FontWeight="Bold" FontSize="16"/>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" >
+                    <Button Content="{materialDesign:PackIcon Kind=CashRegister}" Click="BtnPay_Click" Margin="5 0"/>
+                    <Button Content="{materialDesign:PackIcon Kind=Dollar}" Click="BtnPay_Click" Margin="5 0"/>
+                    <Button Content="{materialDesign:PackIcon Kind=CreditCard}" Click="BtnPay_Click" Margin="5 0"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>
